@@ -1,0 +1,19 @@
+<!-- Control launch file -->
+<launch>
+
+  <node name="puzzlebot_controller" pkg="adjic_autonomousnavigation_puzzlebot" type="adjic_autonomousnavigation_puzzlebot_node"/>
+
+  <node name="odom" pkg="adjic_autonomousnavigation_puzzlebot" type="localization.py"/>
+  <!--<node name="odom1" pkg="adjic_autonomousnavigation_puzzlebot" type="puzzlebot_kinmatic_model.py"/> -->
+
+  <!--Teleop Keyboard-->
+  <!--<node name="teleop" pkg="teleop_twist_keyboard" type="teleop_twist_keyboard.py"/>-->
+
+  <include file="$(find adjic_autonomousnavigation_puzzlebot)/launch/include/robot/puzzlebot_control.launch"/>"
+
+  <!-- To be able to teleop my robot through RVIZ using interactive markers -->
+  <node pkg="interactive_marker_twist_server" type="marker_server"
+        name="twist_marker_server">
+    <remap from="twist_marker_server/cmd_vel" to="/cmd_vel"/>
+  </node>
+</launch>
