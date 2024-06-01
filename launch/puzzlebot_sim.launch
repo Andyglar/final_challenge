@@ -6,7 +6,7 @@
 
         <!-- World & GUI -->
         <arg name="world_name" default="$(find final_challenge)/worlds/ADJIC_map.world"/>
-        <arg name="gui" default="false"/>
+        <arg name="gui" default="true"/>
         <arg name="pos_x" default="0.25"/>
         <arg name="pos_y" default="1.725"/>
         <arg name="pos_theta" default="0"/>
@@ -26,6 +26,9 @@
         <include file="$(find final_challenge)/launch/include/rviz/rviz.launch">
             <arg name="mode" value="$(arg mode)"/>
         </include>
+
+        <arg name="map_file" default="$(find final_challenge)/maps/mymap.yaml"/>
+        <node name="map_server" pkg="map_server" type="map_server" args="$(arg map_file)"/>
 
         <!-- Nodes -->
         <node pkg="final_challenge" type="aruco_finder.py" name="aruco_finder"/>

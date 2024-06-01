@@ -1,0 +1,30 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "${default}",
+        "limitSymbolsToIncludedHeaders": false
+      },
+      "includePath": [
+        "/opt/ros/noetic/include/**",
+        "/home/andreag/catkin_ws/src/final_challenge/adjic_autonomousnavigation_puzzlebot/adjic_autonomousnavigation_puzzlebot/include/**",
+        "/home/andreag/catkin_ws/src/beginner_tutorials/include/**",
+        "/home/andreag/catkin_ws/src/ADJIC-bot/Minichallenges/minichal2/include/**",
+        "/home/andreag/catkin_ws/src/ADJIC-bot/Minichallenges/minichal4/include/**",
+        "/home/andreag/catkin_ws/src/ADJIC-bot/Minichallenges/minichal5/include/**",
+        "/home/andreag/catkin_ws/src/ADJIC-bot/Minichallenges/minichal6/include/**",
+        "/home/andreag/catkin_ws/src/ADJIC-bot/Minichallenges/minichal7/include/**",
+        "/home/andreag/catkin_ws/src/minichallenge5/include/**",
+        "/home/andreag/catkin_ws/src/minichallenge6/include/**",
+        "/home/andreag/catkin_ws/src/puzzlebot_sim/include/**",
+        "/usr/include/**"
+      ],
+      "name": "ROS",
+      "intelliSenseMode": "gcc-x64",
+      "compilerPath": "/usr/bin/gcc",
+      "cStandard": "gnu11",
+      "cppStandard": "c++14"
+    }
+  ],
+  "version": 4
+}
