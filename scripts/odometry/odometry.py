@@ -75,7 +75,7 @@ class localisation:
 
     def get_odom (self , cov_mat , u): 
         self.odom.header.frame_id = "odom"
-        self.odom.child_frame_id = "base_link"
+        self.odom.child_frame_id = self.ref
         self.odom.pose.pose.position.x = u[0] #+ 0.1
         self.odom.pose.pose.position.y = u[1]
 
@@ -101,7 +101,7 @@ class localisation:
             # Fill the transformation information 
             self.t.header.stamp = rospy.Time.now() 
             self.t.header.frame_id = "odom" 
-            self.t.child_frame_id = "base_link" 
+            self.t.child_frame_id = self.ref 
             self.t.transform.translation.x = u[0]
             self.t.transform.translation.y = u[1] 
             self.t.transform.translation.z = 0.0 
@@ -137,4 +137,4 @@ class localisation:
         
 
 if __name__ == "__main__": 
-    localisation("real")
+    localisation("sim")
