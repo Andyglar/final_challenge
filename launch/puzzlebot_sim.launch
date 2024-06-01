@@ -6,7 +6,7 @@
 
         <!-- World & GUI -->
         <arg name="world_name" default="$(find final_challenge)/worlds/ADJIC_map.world"/>
-        <arg name="gui" default="true"/>
+        <arg name="gui" default="false"/>
         <arg name="pos_x" default="0.25"/>
         <arg name="pos_y" default="1.725"/>
         <arg name="pos_theta" default="0"/>
@@ -28,6 +28,7 @@
         </include>
 
         <arg name="map_file" default="$(find final_challenge)/maps/mymap.yaml"/>
+        <node pkg="tf" type="static_transform_publisher" name="map_link" args="0 2 0 0 0 0 1 odom map 100" />
         <node name="map_server" pkg="map_server" type="map_server" args="$(arg map_file)"/>
 
         <!-- Nodes -->
