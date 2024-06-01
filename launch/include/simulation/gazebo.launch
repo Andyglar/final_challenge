@@ -38,7 +38,7 @@
             <arg name="yaw" value="$(arg pos_theta)"/>
         </include>
 
-        <!-- Launch Puzzlebot -->
-        <include file="$(find final_challenge)/launch/include/robot/robot_desc.launch"/>
+        <!-- Launch Puzzlebot 
+        <include file="$(find final_challenge)/launch/include/robot/robot_desc.launch"/>-->
 
     </launch>
