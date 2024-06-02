@@ -28,7 +28,6 @@ class follow_walls:
 
         ###--- Publishers ---###
         self.pub_cmd_vel = rospy.Publisher('/bug_twist', Twist, queue_size=1)
-        self.pub_cmd_vel = rospy.Publisher('/cmd_vel', Twist, queue_size=1) 
         self.pub_bug_vector = rospy.Publisher('/bug_vector', PoseStamped, queue_size=1) 
         self.pub_flag_front = rospy.Publisher('/front_object', Bool, queue_size=1) 
         self.pub_flag_clear = rospy.Publisher('/clear_path', Bool, queue_size=1) 
