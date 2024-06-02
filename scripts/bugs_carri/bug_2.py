@@ -83,6 +83,7 @@ class follow_walls:
                 else: self.calc_fw()
 
             self.print_state()
+            self.fill_msgs()
                 
             ###--- Publish ---###
             self.pub_cmd_vel.publish(self.cmd_vel)
