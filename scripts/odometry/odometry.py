@@ -105,11 +105,8 @@ class localisation:
             self.t.transform.translation.x = u[0]
             self.t.transform.translation.y = u[1] 
             self.t.transform.translation.z = 0.0 
-            # self.theta += 0.01 #theta will be increasing 
-            #Clip the value of theta to the interval [-pi to pi] 
-            theta = np.arctan2(np.sin(u[2]), np.cos(u[2]))
-            #The transformation requires the orientation as a quaternion 
-            q = quaternion_from_euler(0, 0, theta) 
+
+            q = quaternion_from_euler(0, 0, u[2]) 
             self.t.transform.rotation.x = q[0] 
             self.t.transform.rotation.y = q[1] 
             self.t.transform.rotation.z = q[2] 
