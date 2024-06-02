@@ -5,7 +5,7 @@ Panels:
     Property Tree Widget:
       Expanded:
         - /LaserScan1/Autocompute Value Bounds1
-        - /GTG vector1/Status1
+        - /Pose1
         - /RobotModel1
       Splitter Ratio: 0.5
     Tree Height: 407
@@ -90,8 +90,8 @@ Visualization Manager:
     - Alpha: 1
       Autocompute Intensity Bounds: true
       Autocompute Value Bounds:
-        Max Value: -9999
-        Min Value: 9999
+        Max Value: 0.1636500060558319
+        Min Value: 0.1636500060558319
         Value: true
       Axis: Z
       Channel Name: x
@@ -144,7 +144,7 @@ Visualization Manager:
       Shaft Length: 1
       Shaft Radius: 0.05000000074505806
       Shape: Arrow
-      Topic: /theta_fw
+      Topic: /bug_vector
       Unreliable: false
       Value: true
     - Alpha: 1

@@ -88,6 +88,7 @@ class follow_walls:
             ###--- Publish ---###
             self.pub_cmd_vel.publish(self.cmd_vel)
             self.pub_flag_front.publish(self.object_flag)
+            self.pub_bug_vector.publish(self.bug_vector)
             self.pub_flag_clear.publish(self.clear_flag)
             rate.sleep()
     
@@ -148,7 +149,7 @@ class follow_walls:
         quat = quaternion_from_euler(0, 0, self.fw_th)
         self.bug_vector.header.frame_id = "odom"
         self.bug_vector.pose.position.x = self.x_pos
-        self.bug_vector.pose.position.x = self.x_pos
+        self.bug_vector.pose.position.y = self.y_pos
         self.bug_vector.pose.orientation.x = quat[0]
         self.bug_vector.pose.orientation.y = quat[1]
         self.bug_vector.pose.orientation.z = quat[2]
