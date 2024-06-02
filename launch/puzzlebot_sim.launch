@@ -2,7 +2,7 @@
     <launch>
         <!-- Bug number -->
         <arg name="bug" default="0"/>
-        <arg name="mode" default="sim"/><!-- or real -->
+        <arg name="mode" default="sim_2"/><!-- or real -->
 
         <!-- World & GUI -->
         <arg name="world_name" default="$(find final_challenge)/worlds/ADJIC_map.world"/>
@@ -27,6 +27,7 @@
             <arg name="mode" value="$(arg mode)"/>
         </include>
 
+        <!-- PGM Map -->
         <arg name="map_file" default="$(find final_challenge)/maps/mymap.yaml"/>
         <node pkg="tf" type="static_transform_publisher" name="map_link" args="0 2 0 0 0 0 1 odom map 100" />
         <node name="map_server" pkg="map_server" type="map_server" args="$(arg map_file)"/>
@@ -34,6 +35,7 @@
         <!-- Nodes -->
         <node pkg="final_challenge" type="aruco_finder.py" name="aruco_finder"/>
         <node pkg="final_challenge" type="odometry.py" name="odometry"/> 
-        <!--<node pkg="final_challenge" type="bug$(arg bug).py" name="bug$(arg bug)"/> -->
+        <!--<node pkg="final_challenge" type="gtg.py" name="gtg"/>
+        <node pkg="final_challenge" type="bug$(arg bug).py" name="bug$(arg bug)"/> -->
 
     </launch>
